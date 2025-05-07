@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_74c9cc96a5c6d7b8277ca6318f460f7c {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_74c9cc96a5c6d7b8277ca6318f460f7c" ></div>
+        
+    
+<div style="position: fixed; 
+            bottom: 50px; left: 50px; width: 450px; height: 220px; 
+            z-index:9999; font-size:14px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border:2px solid grey;">
+<h4>Metropolitan Police Service<br>Digital Location Mapping Report</h4>
+<b>Case Number:</b> MPS-2025-8742<br>
+<b>Incident Date:</b> 11 May 2025<br>
+<b>Summary:</b> Mobile device signals between 20:00 and 23:00.<br>
+<b>Legend:</b><br>
+- Red marker → Crime scene (Flat 4B, Beyoğlu)<br>
+- Blue circle → Ece Arslan (near Flat 4B)<br>
+- Green circle → Derya Yılmaz (Moda, Kadıköy)<br>
+- Orange marker → Prof. Burak Öztürk (Beşiktaş)<br>
+- Purple marker → Kemal Durmaz (Levent business district)<br>
+- Grey marker → Murat Yalçın (Şanlıurfa, near Göbeklitepe)<br><br>
+<b>Analyst’s Note:</b> Locations are approximate. Ece Arslan’s proximity to the crime scene requires follow-up. Burak Öztürk’s stationary signal does not exclude deliberate device placement.
+</div>
+</body>
+<script>
+    
+    
+            var map_74c9cc96a5c6d7b8277ca6318f460f7c = L.map(
+                "map_74c9cc96a5c6d7b8277ca6318f460f7c",
+                {
+                    center: [41.0351, 28.9744],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_c63adabc74fc423174f9b2d9964d139c = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_74c9cc96a5c6d7b8277ca6318f460f7c);
+        
+    
+            var marker_a1f176d6c38e3a58a1b39d430bfad32d = L.marker(
+                [41.0351, 28.9744],
+                {}
+            ).addTo(map_74c9cc96a5c6d7b8277ca6318f460f7c);
+        
+    
+            var icon_92b83af8f671783389b58db91389a073 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_a1f176d6c38e3a58a1b39d430bfad32d.setIcon(icon_92b83af8f671783389b58db91389a073);
+        
+    
+        var popup_6359e8f7aa0e1d162774d03fdaae21d5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_dc8a23cfabaa6f54d8f6778be26d9d7f = $(`<div id="html_dc8a23cfabaa6f54d8f6778be26d9d7f" style="width: 100.0%; height: 100.0%;">Dr Levent Kara (Flat 4B, Beyoğlu)</div>`)[0];
+            popup_6359e8f7aa0e1d162774d03fdaae21d5.setContent(html_dc8a23cfabaa6f54d8f6778be26d9d7f);
+        
+
+        marker_a1f176d6c38e3a58a1b39d430bfad32d.bindPopup(popup_6359e8f7aa0e1d162774d03fdaae21d5)
+        ;
+
+        
+    
+    
+            var circle_99f2be317f85898af1249f677b8c0348 = L.circle(
+                [41.0353, 28.9725],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 200, "stroke": true, "weight": 3}
+            ).addTo(map_74c9cc96a5c6d7b8277ca6318f460f7c);
+        
+    
+        var popup_27d4c0b82f1ebb9bbc2c1ae2a15c02fb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_95d8b9c4145b0aad34d3d3179bdaa5c4 = $(`<div id="html_95d8b9c4145b0aad34d3d3179bdaa5c4" style="width: 100.0%; height: 100.0%;">Ece Arslan (near Flat 4B)</div>`)[0];
+            popup_27d4c0b82f1ebb9bbc2c1ae2a15c02fb.setContent(html_95d8b9c4145b0aad34d3d3179bdaa5c4);
+        
+
+        circle_99f2be317f85898af1249f677b8c0348.bindPopup(popup_27d4c0b82f1ebb9bbc2c1ae2a15c02fb)
+        ;
+
+        
+    
+    
+            var circle_d4045da7eacaa682c9150cd4d4579c85 = L.circle(
+                [40.9869, 29.0256],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 200, "stroke": true, "weight": 3}
+            ).addTo(map_74c9cc96a5c6d7b8277ca6318f460f7c);
+        
+    
+        var popup_3a68b2fc416deec0080383113a344b3a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fd082d2b0b6b499dbd162bde9a034bdc = $(`<div id="html_fd082d2b0b6b499dbd162bde9a034bdc" style="width: 100.0%; height: 100.0%;">Derya Yılmaz (Moda, Kadıköy)</div>`)[0];
+            popup_3a68b2fc416deec0080383113a344b3a.setContent(html_fd082d2b0b6b499dbd162bde9a034bdc);
+        
+
+        circle_d4045da7eacaa682c9150cd4d4579c85.bindPopup(popup_3a68b2fc416deec0080383113a344b3a)
+        ;
+
+        
+    
+    
+            var marker_e1d3efc0b4e66d0e54a289ed4e71aeee = L.marker(
+                [41.0438, 29.0134],
+                {}
+            ).addTo(map_74c9cc96a5c6d7b8277ca6318f460f7c);
+        
+    
+            var icon_e302070d9fe5559d77b47d083821e95e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_e1d3efc0b4e66d0e54a289ed4e71aeee.setIcon(icon_e302070d9fe5559d77b47d083821e95e);
+        
+    
+        var popup_3619eded8cb482f74015c72e17b95653 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b4900b56bb3c91c0eabb78f19e2f331c = $(`<div id="html_b4900b56bb3c91c0eabb78f19e2f331c" style="width: 100.0%; height: 100.0%;">Prof. Burak Öztürk (Beşiktaş)</div>`)[0];
+            popup_3619eded8cb482f74015c72e17b95653.setContent(html_b4900b56bb3c91c0eabb78f19e2f331c);
+        
+
+        marker_e1d3efc0b4e66d0e54a289ed4e71aeee.bindPopup(popup_3619eded8cb482f74015c72e17b95653)
+        ;
+
+        
+    
+    
+            var marker_848902bb15b5a4b482a9b411e270a7eb = L.marker(
+                [41.0705, 29.0164],
+                {}
+            ).addTo(map_74c9cc96a5c6d7b8277ca6318f460f7c);
+        
+    
+            var icon_58c8c12365d00b21fafe83615dfdb7eb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_848902bb15b5a4b482a9b411e270a7eb.setIcon(icon_58c8c12365d00b21fafe83615dfdb7eb);
+        
+    
+        var popup_c811a6e740992b0ac0df57a8a78ff33d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_84d789df3842b1064d4fc6c83b1e2b49 = $(`<div id="html_84d789df3842b1064d4fc6c83b1e2b49" style="width: 100.0%; height: 100.0%;">Kemal Durmaz (Levent business district)</div>`)[0];
+            popup_c811a6e740992b0ac0df57a8a78ff33d.setContent(html_84d789df3842b1064d4fc6c83b1e2b49);
+        
+
+        marker_848902bb15b5a4b482a9b411e270a7eb.bindPopup(popup_c811a6e740992b0ac0df57a8a78ff33d)
+        ;
+
+        
+    
+    
+            var marker_45012128e650c8a7dda7513ed5f14f8a = L.marker(
+                [37.1608, 38.7969],
+                {}
+            ).addTo(map_74c9cc96a5c6d7b8277ca6318f460f7c);
+        
+    
+            var icon_87f4e5e1823ef16e61da15aa49ae5dfb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "gray", "prefix": "glyphicon"}
+            );
+            marker_45012128e650c8a7dda7513ed5f14f8a.setIcon(icon_87f4e5e1823ef16e61da15aa49ae5dfb);
+        
+    
+        var popup_a12b7e5bf6ca02a52fd402a4c618b065 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_81d7ca601bf940db759e7f1f6de40379 = $(`<div id="html_81d7ca601bf940db759e7f1f6de40379" style="width: 100.0%; height: 100.0%;">Murat Yalçın (Şanlıurfa, near Göbeklitepe)</div>`)[0];
+            popup_a12b7e5bf6ca02a52fd402a4c618b065.setContent(html_81d7ca601bf940db759e7f1f6de40379);
+        
+
+        marker_45012128e650c8a7dda7513ed5f14f8a.bindPopup(popup_a12b7e5bf6ca02a52fd402a4c618b065)
+        ;
+
+        
+    
+</script>
+</html>
